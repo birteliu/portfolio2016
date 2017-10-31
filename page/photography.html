@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>HAO HSUAN</title>
+    <link rel="shortcut icon" href="../img/pageicon.png" type="image/vnd.microsoft.icon">
+    <!--給一般瀏覽器-->
+    <link rel="shortcut icon" href="../img/pageicon.png" type="image/x-icon">
+    <!--給IE瀏覽器-->
+    <link rel="stylesheet" type="text/css" href="../css/style.css" media="screen">
+    <link rel="stylesheet" type="text/css" href="../css/portfolio.css" media="screen">
+    <link rel="stylesheet" type="text/css" href="../css/hover-min.css" media="screen">
+    <link rel="stylesheet" type="text/css" href="../css/slick.css" media="screen">
+    <link rel="stylesheet" type="text/css" href="../css/slick-theme.css" media="screen">
+    <link rel="stylesheet" type="text/css" href="../css/component.css" media="screen">
+    <meta http-equiv="cache-control" content="no-cache">
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0">
+    <meta name="HandheldFriendly" content="true">
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1">
+    <meta property="og:title" content="Hao Hsuan">
+    <meta property="og:description" content="Hao Hsuan - Portfolio">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="http://www.birteliu.clouds.twgogo.org/portfolio">
+    <meta property="og:image" content="http://www.birteliu.clouds.twgogo.org/portfolio/images/fb.jpg">
+    <meta property="og:site_name" content="Portfolio">
+    <meta property="og:locale" content="zh_TW">
+    <meta property="og:locale:alternate" content="en_US">
+    <script type="text/javascript" src="../js/jquery-3.0.0.min.js"></script>
+    <script src="../js/mobile-menu/modernizr.custom.js"></script>
+</head>
+
+<body>
+    <div id="page">
+        <header id="works">
+            <div class="header-container ta-c pos-r">
+                <div class="ta-c pos-r head-logo">
+                    <a href="http://www.birteliu.clouds.twgogo.org/portfolio"><h1 class="font-lucida-b pt2">HAO HSUAN</h1></a>
+                </div>
+                <div class="pos-r mobile-logo">
+                    <a href="http://www.birteliu.clouds.twgogo.org/portfolio"><h1 class="font-lucida-b">HAO HSUAN</h1></a>
+                </div>
+                <nav class="ta-c pd1">
+                    <ul class="font-hevelcita">
+                        <li><a href="../index.html">Works</a></li>
+                        <li><a href="about.html">About</a></li>
+                        <li><a href="javascript:void(0)">Photography</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </header>
+        <div id="photo-content" class="pt40px">
+            <div class="w-100 main-region cf screenpd">
+                <div class="sliders pb1">
+                    <div>
+                        <img src="../img/photo1.png" alt="">
+                    </div>
+                    <div>
+                        <img src="../img/photo2.jpg" alt="">
+                    </div>
+                    <div>
+                        <img src="../img/photo3.jpg" alt="">
+                    </div>
+                </div>
+                <div class="mobile-slide">
+                    <img src="../img/photo1-mobile.png" alt="" class="img-100">
+                </div>
+                <div class="pd1">
+                    <hr>
+                </div>
+            </div>
+            <div class="w-100 main-region cf" id="photography">
+                <div class="pd-center main" id="content">
+                    <img src="../img/photo4.png" alt="" class="img-100">
+                    <img src="../img/photo5.png" alt="" class="img-100 pt1">
+                    <img src="../img/photo6.png" alt="" class="img-100 pt1">
+                    <img src="../img/photo7.png" alt="" class="img-100 pt1">
+                    <img src="../img/photo8.png" alt="" class="img-100 pt1">
+                    <img src="../img/photo9.png" alt="" class="img-100 pt1">
+                    <img src="../img/photo10.png" alt="" class="img-100 pt1">
+                    <img src="../img/photo17.jpg" alt="" class="img-100 pt1">                    
+                </div>
+            </div>
+<!--             <a id="next" href="load.html">下一頁</a>
+ -->            <div class="w-100 main-region cf pd2">
+                <div class="w-100 ta-c pt2">
+                    <a href="https://www.facebook.com/zyi870213" class="icon hvr-pulse-grow"><img src="../img/Facebook.svg" alt="" class="img-100"></a>
+                    <a href="https://www.instagram.com/zyi870213/" class="icon hvr-pulse-grow"><img src="../img/Instagram.svg" alt="" class="img-100"></a>
+                </div>
+            </div>
+        </div>
+        <footer class="w-100">
+            <div class="footer-container">
+                <div class="ta-c">
+                    <p class="font-lucida-r">© 2016 created by Hao Hsuan</p>
+                </div>
+            </div>
+        </footer>
+    </div>
+    <div class="mobile-menu">
+        <div id="dl-menu" class="dl-menuwrapper">
+            <button class="dl-trigger">Open Menu</button>
+            <ul class="dl-menu font-lucida-r">
+                <li><a href="../index.html">Works</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="javascript:void(0)contact-content" class="noborder">Photography</a></li>
+            </ul>
+        </div>
+        <!-- /dl-menuwrapper -->
+    </div>
+    <!-- js src -->
+    <script type="text/javascript" src="../js/portfolio.js"></script>
+    <script src="../js/jquery.dlmenu.js"></script>
+    <script>
+    $(function() {
+        $('#dl-menu').dlmenu();
+    });
+    </script>
+    <script type="text/javascript" src="../js/slick.min.js"></script>
+    <script type="text/javascript" src="../js/jquery.infinitescroll.js"></script>
+    <script>
+        $('#content').infinitescroll('binding','unbind');
+        $('#content').data('infinitescroll', null);
+        $(window).unbind('.infscr');
+        
+        $('#content').infinitescroll({
+        navSelector : "#next:last",
+        nextSelector : "a#next:last",
+        itemSelector : "#content",
+        dataType : 'html',
+        maxPage : 2
+        });
+
+        //網址切換
+        $(function () {
+            var cont_h = $('.main').height();
+            var pathname = window.location.href;
+            var pathhost  = location.hostname;
+       
+        $(document).scroll(function () {
+              var top = window.pageYOffset;
+                if(top<cont_h){
+                    window.history.pushState('', '', pathname);
+                    
+                }else{
+                    var nexturl = $('#next').attr("href").replace("http://","").replace(pathhost,"");
+                    window.history.pushState('', '', nexturl);
+                    
+                }
+            });
+        });
+    </script>
+    <script type="text/javascript">
+    $(document).ready(function() {
+        $('.sliders').slick({
+            dots: true,
+            infinite: true,
+        });
+    });
+    </script>
+</body>
+
+</html>

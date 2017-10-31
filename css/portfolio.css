@@ -1,0 +1,534 @@
+ /*↓重置歸零css*/
+ 
+ * {
+     padding: 0;
+     margin: 0;
+     vertical-align: baseline;
+     /*垂直對齊方式,baseline:默認,元素放置在父元素的基線上。*/
+     -webkit-box-sizing: border-box;
+     /*元素指定的任何內邊距和邊框都將在已設定的寬度和高度內進行繪製*/
+     -moz-box-sizing: border-box;
+     box-sizing: border-box;
+     list-style-type: none;
+     /*使list前面沒有原點,因為ul>li預設有前置點*/
+     text-decoration: none;
+     /*使文字沒有裝飾,因為a預設有下劃線*/
+ }
+ 
+ html,
+ body {
+     width: 100%;
+     height: 100%;
+ }
+ 
+ body {
+     overflow-x: hidden;
+     overflow-y: auto;
+     font-size: 100%;
+     line-height: 1.5;
+     font-family: "蘋方-繁", "微軟繁黑體-標準", "微軟繁黑體-粗體", "微軟正黑體", sans-serif;
+ }
+ 
+ h1,
+ h2,
+ h3 {
+     line-height: 1;
+ }
+ /*使如果視窗過小,文字下摺時不會間距太遠*/
+ 
+ h1 *,
+ h2 *,
+ h3 * {
+     font-size: 40px;
+ }
+ 
+ a {
+     display: inline-block;
+     color: inherit;
+ }
+ /*↓開始頁面css*/
+ 
+ #page {
+     width: 100%;
+     /*     min-height: 100vmin;
+*/
+     float: left;
+     /*如果不浮動沒有高度*/
+     overflow-x: hidden;
+ }
+ 
+ .fl {
+     float: left;
+ }
+ 
+ .fr {
+     float: right;
+ }
+ 
+ .cf:before,
+ .cf:after {
+     content: " ";
+     /* 1 */
+     display: table;
+     /* 2 */
+     /*table表格元素永遠不會下摺,這是為防止螢幕變小時,表格可能沒有高度,所以先設空元素給他*/
+ }
+ 
+ .cf:after {
+     clear: both;
+ }
+ 
+ .cf {
+     *zoom: 1;
+ }
+ 
+ .img-100 {
+     width: 100%;
+     display: block;
+     margin: 0;
+ }
+ /*共用css*/
+ 
+ .header-container h1 {
+     letter-spacing: 5px;
+     color: #343434;
+ }
+ 
+ header .mobile-logo {
+     display: none;
+ }
+ 
+ nav li {
+     display: inline-block;
+ }
+ 
+ nav li a {
+     display: block;
+     padding: 0 20px;
+     color: #343434;
+     -webkit-transition: all ease-in-out .35s;
+     -o-transition: all ease-in-out .35s;
+     transition: all ease-in-out .35s;
+ }
+ 
+ nav li a:hover {
+     color: #A4A4B2;
+ }
+ 
+ nav li a[href*="java"] {
+     color: #A4A4B2;
+     ;
+ }
+ 
+ .mobile-menu {
+     display: none;
+ }
+ 
+ .main-region {
+     width: 95%;
+     max-width: 900px;
+     float: none;
+     margin: 0 auto;
+ }
+ 
+ .icon {
+     width: 25px;
+     margin: 0 3px;
+ }
+ 
+ footer {
+     background-color: #D8D8D8;
+     font-size: 0.9em;
+ }
+ 
+ .footer-container {
+     width: 95%;
+     max-width: 1360px;
+     float: none;
+     margin: 23px auto 20px auto;
+     display: block;
+ }
+ /*index css*/
+ 
+ #index-content p {
+     font-size: 0.8em;
+     line-height: 1.6;
+ }
+ 
+ #index-content .work-section a:hover {
+     color: #838488;
+     -webkit-transition: all ease-in-out .35s;
+     -o-transition: all ease-in-out .35s;
+     transition: all ease-in-out .35s;
+ }
+ 
+ #index-content .mobile {
+     text-align: center;
+     padding-top: 10px;
+     display: none;
+ }
+ 
+ .remodal-bg.with-red-theme.remodal-is-opening,
+ .remodal-bg.with-red-theme.remodal-is-opened {
+     filter: none;
+ }
+ 
+ .remodal-overlay.with-red-theme {
+     background-color: #f44336;
+ }
+ 
+ .remodal.with-red-theme {
+     background: #fff;
+ }
+ .modalsection img {
+    /*width: 80%;*/
+ }
+ .ptext {
+    margin: 0 2em;
+    text-align: justify;
+    line-height: 1.8;
+ }
+ /*card*/
+ 
+ .card figure {
+     margin: 0;
+     position: relative;
+ }
+ 
+ .card figure img {
+     max-width: 100%;
+     display: block;
+     position: relative;
+ }
+ 
+ .card figcaption {
+     position: absolute;
+     top: 0;
+     left: 0;
+     padding: 10px 20px;
+     opacity: 0.3;
+     background-color: rgba(49, 54, 56, 0.9);
+ }
+ 
+ .card figcaption p {
+     margin: 0;
+     padding: 0;
+     color: #fff;
+ }
+ 
+ .card figcaption p:before {
+     content: ' ';
+ }
+ 
+ .hover-effect figure {
+     overflow: hidden;
+ }
+ 
+ .hover-effect figure img {
+     -webkit-transition: -webkit-transform 0.4s;
+     -moz-transition: -moz-transform 0.4s;
+     transition: transform 0.4s;
+ }
+ 
+ .hover-effect figcaption {
+     width: 100%;
+     top: auto;
+     bottom: 0;
+     opacity: 0;
+     -webkit-transform: translateY(100%);
+     -moz-transform: translateY(100%);
+     -ms-transform: translateY(100%);
+     transform: translateY(100%);
+     -webkit-transition: -webkit-transform 0.4s, opacity 0.1s 0.3s;
+     -moz-transition: -moz-transform 0.4s, opacity 0.1s 0.3s;
+     transition: transform 0.4s, opacity 0.1s 0.3s;
+ }
+ 
+ .no-touch .hover-effect figure:hover figcaption,
+ .hover-effect figure.cs-hover figcaption {
+     opacity: 1;
+     -webkit-transform: translateY(0px);
+     -moz-transform: translateY(0px);
+     -ms-transform: translateY(0px);
+     transform: translateY(0px);
+     -webkit-transition: -webkit-transform 0.4s, opacity 0.1s;
+     -moz-transition: -moz-transform 0.4s, opacity 0.1s;
+     transition: transform 0.4s, opacity 0.1s;
+ }
+ /**/
+ /*about css*/
+ 
+ #about-content .section1 img {
+     border-radius: 50%;
+ }
+ 
+ #about-content .section2 {
+     width: 80%;
+     margin: 0 auto;
+ }
+ 
+ #about-content .section2 h6 {
+     text-align: left;
+     font-size: 1em;
+     color: #343434;
+ }
+ 
+ #about-content .section2 p {
+     line-height: 2;
+     color: #343434;
+ }
+ 
+ #about-content .web-icon {
+     display: inline-block;
+ }
+ 
+ #about-content .web-icon img {
+     width: 40px;
+ }
+ 
+ #contact-content .contact-form {
+     width: 90%;
+     max-width: 760px;
+     float: none;
+     margin: 0 auto;
+ }
+ 
+ form#web-form {
+     color: #343434;
+ }
+ 
+ form#web-form div {
+     margin-bottom: 0;
+ }
+ 
+ form#web-form input[type="text"],
+ form#web-form input[type="email"],
+ form#web-form textarea {
+     width: 50%;
+     line-height: 2;
+     font-size: 0.9em;
+     resize: none;
+     padding: 10px;
+     background: none;
+     border: 1px solid #343434;
+ }
+ 
+ input.placeholder-c::-webkit-input-placeholder,
+ textarea.placeholder-c::-webkit-input-placeholder {
+     color: #343434;
+     font-weight: normal;
+ }
+ 
+ input.placeholder-c:-ms-input-placeholder,
+ textarea.placeholder-c:-ms-input-placeholder {
+     color: #343434;
+     font-weight: normal;
+ }
+ 
+ input.placeholder-c::-moz-placeholder,
+ textarea.placeholder-c::-moz-placeholder {
+     color: #343434;
+     font-weight: normal;
+ }
+ 
+ form#web-form input[type="text"],
+ form#web-form input[type="email"] {
+     border-bottom: none;
+ }
+ 
+ form#web-form div:last-of-type {
+     text-align: center;
+     margin-top: 10px;
+ }
+ 
+ form#web-form input[type="text"]:focus,
+ form#web-form input[type="tel"]:focus,
+ form#web-form input[type="email"]:focus,
+ form#web-form textarea:focus {
+     outline: none;
+ }
+ 
+ input:focus::-webkit-input-placeholder,
+ textarea:focus::-webkit-input-placeholder {
+     color: transparent;
+ }
+ 
+ input:focus:-moz-placeholder,
+ textarea:focus:-moz-placeholder {
+     color: transparent;
+ }
+ /* FF 4-18 */
+ 
+ input:focus::-moz-placeholder,
+ textarea:focus::-moz-placeholder {
+     color: transparent;
+ }
+ /* FF 19+ */
+ 
+ input:focus:-ms-input-placeholder,
+ textarea:focus:-ms-input-placeholder {
+     color: transparent;
+ }
+ /* IE 10+ */
+ 
+ form#web-form .btn {
+     padding: 4px 1em;
+     color: #343434;
+     width: 18%;
+     line-height: 2;
+     font-size: 0.9em;
+     resize: none;
+     padding: 10px;
+     background: none;
+     border: 1px solid #343434;
+ }
+ 
+ form#web-form .btn:hover {
+     background-color: #F2F2F2;
+     color: #343434;
+     cursor: pointer;
+     -webkit-transition: all ease-in-out .35s;
+     -o-transition: all ease-in-out .35s;
+     transition: all ease-in-out .35s;
+ }
+ /*photo css*/
+ 
+ #photo-content .slide-wrapper {
+     width: 80%;
+     margin: 50px auto;
+ }
+ 
+ #photo-content .mobile-slide {
+     display: none;
+ }
+ 
+ .slider {
+     width: 50%;
+     margin: 100px auto;
+ }
+ 
+ .slick-slide {
+     margin: 0px 20px;
+ }
+ 
+ .slick-slide img {
+     width: 100%;
+ }
+ 
+ .slick-prev:before,
+ .slick-next:before {
+     color: black;
+ }
+ 
+ #photo-content .screenpd {
+     padding-top: 2em;
+     padding-bottom: 2em;
+ }
+ 
+ #photography .pd-center {
+     padding-left: 0.5em;
+     padding-right: 0.5em;
+ }
+ 
+ @media screen and (min-width:300px) and (max-width:800px) {
+     #index-content .mobile {
+         display: block;
+     }
+     #about-content .section2 h6,
+     #about-content .section2 p {
+         text-align: center;
+     }
+     .mobile-center {
+        text-align: center;
+        padding-top: 5px;
+     }
+     #photo-content .sliders {
+         display: none;
+     }
+     #photo-content .mobile-slide {
+         display: block;
+         width: 85%;
+         float: none;
+         margin: 0 auto;
+     }
+     #photo-content .screenpd {
+         padding-bottom: 1px;
+     }
+     figcaption {
+        display: none;
+     }
+ }
+ 
+ @media screen and (min-width:640px) and (max-width:800px) {
+     #about-content .section2 {
+         width: 100%;
+     }
+     form#web-form input[type="text"],
+     form#web-form input[type="email"],
+     form#web-form textarea {
+         width: 60%;
+     }
+     form#web-form .btn {
+         width: 35%;
+     }
+ }
+ 
+ @media screen and (min-width:300px) and (max-width:640px) {
+     header .head-logo {
+         display: none;
+     }
+     header .mobile-logo {
+         display: block;
+         width: 500px;
+         height: 0px;
+         position: relative;
+         top: 25px;
+         left: 50%;
+         margin-left: -250px;
+     }
+     header .mobile-logo h1 {
+         font-size: 30px;
+         letter-spacing: 2px;
+     }
+     header nav {
+         display: none;
+     }
+     .mobile-menu {
+         display: block;
+         position: fixed;
+         top: 10px;
+         left: 10px;
+         z-index: 999;
+     }
+     #index-content,
+     #about-content. #photo-content {
+         padding-top: 40px;
+     }
+     .pt40px {
+         padding-top: 40px;
+     }
+     #contact-content .contact-form {
+         width: 100%;
+         max-width: 760px;
+         float: none;
+         margin: 0 auto;
+     }
+     form#web-form input[type="text"],
+     form#web-form input[type="email"],
+     form#web-form textarea {
+         width: 85%;
+     }
+     form#web-form .btn {
+         width: 42%;
+     }
+ }
+ 
+ @media screen and (min-width:300px) and (max-width:360px) {
+     header .mobile-logo h1 {
+         font-size: 25px;
+         letter-spacing: 2px;
+     }
+     #index-content {
+         padding-top: 25px;
+     }
+ }
